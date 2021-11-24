@@ -1,0 +1,2 @@
+2021-11-24 19:30:06 - Application shutdown requested.
+2021-11-24 19:30:06 - Closing JPA EntityManagerFactory for persistence unit 'default'
