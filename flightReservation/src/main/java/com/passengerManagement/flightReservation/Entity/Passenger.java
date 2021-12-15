@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.passengerManagement.com.flightReservation.Entity;
+package com.passengerManagement.flightReservation.Entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;

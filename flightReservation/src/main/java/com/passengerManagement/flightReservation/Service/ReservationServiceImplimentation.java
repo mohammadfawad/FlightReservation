@@ -1,26 +1,31 @@
-package com.passengerManagement.com.flightReservation.Service;
+package com.passengerManagement.flightReservation.Service;
 
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.transaction.Transactional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.passengerManagement.com.flightReservation.DataTransferObject.ReservationRequest;
-import com.passengerManagement.com.flightReservation.Entity.Flight;
-import com.passengerManagement.com.flightReservation.Entity.Passenger;
-import com.passengerManagement.com.flightReservation.Entity.Reservation;
-import com.passengerManagement.com.flightReservation.Repository.FlightRepository;
-import com.passengerManagement.com.flightReservation.Repository.PassengerRepository;
-import com.passengerManagement.com.flightReservation.Repository.ReservationRepository;
-import com.passengerManagement.com.flightReservation.Utility.EmailUtility;
-import com.passengerManagement.com.flightReservation.Utility.PDFGenerator;
+import com.passengerManagement.flightReservation.DataTransferObject.ReservationRequest;
+import com.passengerManagement.flightReservation.Entity.Flight;
+import com.passengerManagement.flightReservation.Entity.Passenger;
+import com.passengerManagement.flightReservation.Entity.Reservation;
+import com.passengerManagement.flightReservation.Repository.FlightRepository;
+import com.passengerManagement.flightReservation.Repository.PassengerRepository;
+import com.passengerManagement.flightReservation.Repository.ReservationRepository;
+import com.passengerManagement.flightReservation.Utility.EmailUtility;
+import com.passengerManagement.flightReservation.Utility.PDFGenerator;
 
 @Service
 public class ReservationServiceImplimentation implements ReservationService {
 
+	@Value("${com.passengerManagement.flightReservation.itinerary.dirPath}")
+	private String PASSENGER_RESERVATION_PATH_PDF;
 	private static final Logger ReservationServiceLOGGER =LoggerFactory.getLogger(ReservationServiceImplimentation.class);
 	@Autowired
 	FlightRepository flightRepository;
@@ -34,9 +39,10 @@ public class ReservationServiceImplimentation implements ReservationService {
 	EmailUtility emailUtility;
 	
 	@Override
+	@Transactional
 	public Reservation bookFlight(ReservationRequest reservationRequest) {
 		// TODO Auto-generated method stub
-		// MAKE PAYMENT THROUGH PAYMENT GATEWAY
+		// MAKE PAYMENT THROUGH PAYMENT GATEWAY NOT IMPLIMENTED THEN BELOW PROCESS
 		ReservationServiceImplimentation.ReservationServiceLOGGER.info("Method:bookFlight()->Fetch Flight Details from dataBase.");
 		Flight flight = this.flightRepository.getById(reservationRequest.getFlightId());
 		
@@ -54,7 +60,7 @@ public class ReservationServiceImplimentation implements ReservationService {
 		reservation.setCreated(new Timestamp(new Date().getTime()));
 		
 		Reservation savedReservation = this.reservationRepository.save(reservation);
-		String filePath = "/home/spring/EclipseSTS/flightReservation/src/main/webapp/WEB-INF/views/passengerPdf/passengersPdf" + savedReservation.getReservationId().toString() + ".pdf";
+		String filePath = this.PASSENGER_RESERVATION_PATH_PDF + savedReservation.getReservationId().toString() + ".pdf";
 		this.pdfGenerator.generateItinerary(savedReservation, filePath);
 		this.emailUtility.sendItinerary(passenger.getPassengerEmail(), filePath);
 		ReservationServiceImplimentation.ReservationServiceLOGGER.info("Method:bookFlight()->SavedReservation + PDF and Email Generated.");

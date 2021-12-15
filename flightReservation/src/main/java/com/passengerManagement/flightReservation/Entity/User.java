@@ -3,19 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.passengerManagement.com.flightReservation.Entity;
+package com.passengerManagement.flightReservation.Entity;
 
 import java.io.Serializable;
+import java.util.Set;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import org.dom4j.tree.AbstractEntity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -33,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 		@NamedQuery(name = "User.findByUserLastName", query = "SELECT u FROM User u WHERE u.userLastName = :userLastName"),
 		@NamedQuery(name = "User.findByUserEmail", query = "SELECT u FROM User u WHERE u.userEmail = :userEmail"),
 		@NamedQuery(name = "User.findByUserPassword", query = "SELECT u FROM User u WHERE u.userPassword = :userPassword") })
-public class User implements Serializable {
+public class User extends AbstractEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -49,6 +56,9 @@ public class User implements Serializable {
 	private String userEmail;
 	@Column(length = 256)
 	private String userPassword;
+	@ManyToMany
+	@JoinTable(name="UserRole",joinColumns = @JoinColumn(name="userId"), inverseJoinColumns = @JoinColumn(name="roleId"))
+	private Set<Role> roles;
 
 	public User() {
 	}
@@ -95,6 +105,20 @@ public class User implements Serializable {
 
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
+	}
+
+	/**
+	 * @return the roles
+	 */
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	/**
+	 * @param roles the roles to set
+	 */
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
 	}
 
 	@Override

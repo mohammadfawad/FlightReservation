@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.DataTransferObject;
+package com.passengerManagement.flightReservation.DataTransferObject;
 
 public class ReservationUpdateRequest {
 

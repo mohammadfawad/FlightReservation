@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation;
+package com.passengerManagement.flightReservation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

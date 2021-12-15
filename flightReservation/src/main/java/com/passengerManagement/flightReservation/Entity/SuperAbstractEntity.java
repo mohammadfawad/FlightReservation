@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.Entity;
+package com.passengerManagement.flightReservation.Entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

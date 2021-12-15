@@ -11,6 +11,7 @@
 	<groupId>com.passengerManagement</groupId>
 	<artifactId>flightReservation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>flightReservation</name>
 	<description>Spring Boot Web Passenger Management System and Flight Reservation</description>
 	<properties>
@@ -28,6 +29,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>

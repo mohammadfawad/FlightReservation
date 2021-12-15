@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.Controller;
+package com.passengerManagement.flightReservation.Controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,9 +8,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.passengerManagement.com.flightReservation.DataTransferObject.ReservationRequest;
-import com.passengerManagement.com.flightReservation.Entity.Reservation;
-import com.passengerManagement.com.flightReservation.Service.ReservationService;
+import com.passengerManagement.flightReservation.DataTransferObject.ReservationRequest;
+import com.passengerManagement.flightReservation.Entity.Reservation;
+import com.passengerManagement.flightReservation.Service.ReservationService;
 
 @Controller
 public class ReservationController {

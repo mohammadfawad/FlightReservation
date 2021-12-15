@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.Utility;
+package com.passengerManagement.flightReservation.Utility;
 
 import java.io.File;
 
@@ -8,6 +8,7 @@ import javax.mail.internet.MimeMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailUtility {
 	
+	@Value("${com.passengerManagement.flightReservation.itinerary.emailSubject}")
+	private String EMAIL_SUBJECT;
+	@Value("${com.passengerManagement.flightReservation.itinerary.emailBody}")
+	private String EMAIL_BODY;
 	private static final Logger emailLOGGER =LoggerFactory.getLogger(EmailUtility.class);
 	@Autowired
 	private JavaMailSender javaMailSender;
@@ -24,8 +29,8 @@ public class EmailUtility {
 		try {
 			MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 			mimeMessageHelper.setTo(receiverEmail);
-			mimeMessageHelper.setSubject("Itinerary Flight Document");
-			mimeMessageHelper.setText("Itinerary Document is Attached, Find And Download Attachment!.");
+			mimeMessageHelper.setSubject(this.EMAIL_SUBJECT);
+			mimeMessageHelper.setText(this.EMAIL_BODY);
 			mimeMessageHelper.addAttachment("Itinerary", new File(filePath));
 			this.javaMailSender.send(mimeMessage);
 		} catch (MessagingException e) {

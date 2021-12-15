@@ -1,8 +1,9 @@
-package com.passengerManagement.com.flightReservation.Controller;
+package com.passengerManagement.flightReservation.Controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,17 +11,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.passengerManagement.com.flightReservation.Entity.User;
-import com.passengerManagement.com.flightReservation.Repository.UserRepository;
+import com.passengerManagement.flightReservation.Entity.User;
+import com.passengerManagement.flightReservation.Repository.UserRepository;
+import com.passengerManagement.flightReservation.Service.SecurityService;
 
 @Controller
 public class UserController {
 
 	private static final Logger userLOGGER = LoggerFactory.getLogger(UserController.class);
 	@Autowired
+	private SecurityService securityService;
+	@Autowired
 	private UserRepository userRepository;
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	@RequestMapping("/")
+	public String root() {
+		UserController.userLOGGER.info("Method:root()");
+		return "index";
+	}
+	
+	@RequestMapping("/index")
 	public String index() {
 		UserController.userLOGGER.info("Method:index()");
 		return "index";
@@ -35,6 +47,7 @@ public class UserController {
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user, ModelMap modelMap) {
 		if (!user.getUserEmail().isBlank() && !user.getUserPassword().isBlank() && !user.getUserFirstName().isBlank()) {
+			user.setUserPassword(this.bCryptPasswordEncoder.encode(user.getUserPassword()));
 			modelMap.addAttribute("userCreated", this.userRepository.save(user));
 		} else {
 			modelMap.addAttribute("alert", "<hr>Invalid user Details <br>Enter other credentials!<br><hr>");
@@ -61,7 +74,7 @@ public class UserController {
 	public String login(@RequestParam("userEmail") String userEmail, @RequestParam("userPassword") String userPassword,
 			ModelMap modelMap) {
 		if (!userEmail.isBlank() && !userPassword.isBlank()) {
-			if (this.userRepository.findByUserEmail(userEmail).getUserPassword().equals(userPassword)) {
+			if (this.securityService.login(userEmail, userPassword)) {//this.userRepository.findByUserEmail(userEmail).getUserPassword().equals(userPassword)
 				UserController.userLOGGER.info("Method:login()->Blank Credentials");
 				return "flights/findFlights";
 			} else {

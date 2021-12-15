@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<property name="LOG_DIR"
-		value="/home/spring/EclipseSTS/flightReservation/src/main/logs" />
+		value="/home/spring/git/springBootProjects/flightReservation/src/main/logs" />
 	<property name="FILE_PREFIX" value="flightReservation" />
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">

@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.Controller;
+package com.passengerManagement.flightReservation.Controller;
 
 import java.util.Date;
 import java.util.List;
@@ -12,8 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.passengerManagement.com.flightReservation.Entity.Flight;
-import com.passengerManagement.com.flightReservation.Repository.FlightRepository;
+import com.passengerManagement.flightReservation.Entity.Flight;
+import com.passengerManagement.flightReservation.Repository.FlightRepository;
 
 @Controller
 public class FlightController {
@@ -55,7 +55,7 @@ public class FlightController {
 		return "flights/findFlights";
 	}
 
-	@RequestMapping("flightReservationForm")
+	@RequestMapping("/flightReservationForm")
 	public String flightReservationForm(@RequestParam("flightId") Integer flightId, ModelMap modelMap) {
 		modelMap.addAttribute("reserveFlight", (Flight) this.flightRepository.getById(flightId));
 		FlightController.flightLOGGER.info("Method:flightReservationForm()");
@@ -67,6 +67,11 @@ public class FlightController {
 		modelMap.addAttribute("viewAllFlights", this.flightRepository.findAll());
 		FlightController.flightLOGGER.info("Method:viewAllFlights()");
 		return "flights/viewAllFlights";
+	}
+	
+	@RequestMapping("/showAddFlight")
+	public String showAddFlight() {
+		return "flights/addFlight";
 	}
 
 }

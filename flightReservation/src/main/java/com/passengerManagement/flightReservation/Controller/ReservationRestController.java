@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.Controller;
+package com.passengerManagement.flightReservation.Controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.passengerManagement.com.flightReservation.DataTransferObject.ReservationUpdateRequest;
-import com.passengerManagement.com.flightReservation.Entity.Reservation;
-import com.passengerManagement.com.flightReservation.Repository.ReservationRepository;
+import com.passengerManagement.flightReservation.DataTransferObject.ReservationUpdateRequest;
+import com.passengerManagement.flightReservation.Entity.Reservation;
+import com.passengerManagement.flightReservation.Repository.ReservationRepository;
 
 @RestController
 @CrossOrigin

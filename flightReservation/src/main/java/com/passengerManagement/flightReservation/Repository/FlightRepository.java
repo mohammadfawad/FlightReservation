@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.Repository;
+package com.passengerManagement.flightReservation.Repository;
 
 import java.util.Date;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.passengerManagement.com.flightReservation.Entity.Flight;
+import com.passengerManagement.flightReservation.Entity.Flight;
 
 @Repository
 public interface FlightRepository extends JpaRepository<Flight, Integer> {

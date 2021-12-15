@@ -1,4 +1,4 @@
-package com.passengerManagement.com.flightReservation.Utility;
+package com.passengerManagement.flightReservation.Utility;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -13,7 +13,7 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.passengerManagement.com.flightReservation.Entity.Reservation;
+import com.passengerManagement.flightReservation.Entity.Reservation;
 
 @Component
 public class PDFGenerator {
@@ -38,7 +38,7 @@ public class PDFGenerator {
 		PdfPTable pdfPTable = new PdfPTable(12);
 		PdfPCell pdfCell;
 
-		pdfCell = new PdfPCell(new Phrase("CheckIn Completed"));
+		pdfCell = new PdfPCell(new Phrase("Reservation Completed"));
 		pdfCell.setColspan(12);
 		pdfPTable.addCell(pdfCell);
 		
