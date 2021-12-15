@@ -1,0 +1,2 @@
+2021-12-13 10:03:38 - Method:bookFlight()->SavedReservation + PDF and Email Generated.
+2021-12-13 10:03:38 - Method:completeReservation()ReservationRequest [flightId=3, passengerFirstName=Ali Azmat2, passengerLastName=khan, passengerEmail=m.mohammadfawad@gmail.com, passengerPhone=03000874407, nameOnCard=Ali Azmat2, cardNo=123456789, expiryDate=05-02-2023, securityCode=457]

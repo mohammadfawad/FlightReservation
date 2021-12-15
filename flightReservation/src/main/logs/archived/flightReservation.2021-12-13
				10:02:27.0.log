@@ -1,0 +1,9 @@
+2021-12-13 10:02:27 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-12-13 10:02:27 - Initializing Spring embedded WebApplicationContext
+2021-12-13 10:02:27 - Root WebApplicationContext: initialization completed in 2074 ms
+2021-12-13 10:02:27 - flightReservationDatasource - Starting...
+2021-12-13 10:02:27 - flightReservationDatasource - Start completed.
+2021-12-13 10:02:27 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-13 10:02:27 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-13 10:02:27 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-13 10:02:27 - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
