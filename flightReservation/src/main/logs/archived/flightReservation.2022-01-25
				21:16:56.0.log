@@ -1,0 +1,4 @@
+2022-01-25 21:16:56 - Adding welcome page template: index
+2022-01-25 21:16:56 - Starting ProtocolHandler ["http-nio-8082"]
+2022-01-25 21:16:56 - Tomcat started on port(s): 8082 (http) with context path '/flightReservation'
+2022-01-25 21:16:56 - Started FlightReservationApplication in 6.815 seconds (JVM running for 8.196)

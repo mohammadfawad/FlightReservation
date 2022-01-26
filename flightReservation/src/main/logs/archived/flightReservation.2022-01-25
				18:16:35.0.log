@@ -1,0 +1,6 @@
+2022-01-25 18:16:35 - Tomcat started on port(s): 8082 (http) with context path '/flightReservation'
+2022-01-25 18:16:35 - Started FlightReservationApplication in 6.762 seconds (JVM running for 8.098)
+2022-01-25 18:16:35 - Application shutdown requested.
+2022-01-25 18:16:35 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-25 18:16:35 - flightReservationDatasource - Shutdown initiated...
+2022-01-25 18:16:35 - flightReservationDatasource - Shutdown completed.

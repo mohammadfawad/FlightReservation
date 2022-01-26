@@ -1,0 +1,4 @@
+2021-12-29 20:46:42 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-29 20:46:42 - Initializing Servlet 'dispatcherServlet'
+2021-12-29 20:46:42 - Completed initialization in 2 ms
+2021-12-29 20:46:42 - Method:findReservation({})1

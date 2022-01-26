@@ -1,0 +1,5 @@
+2022-01-25 18:16:30 - Finished Spring Data repository scanning in 103 ms. Found 5 JPA repository interfaces.
+2022-01-25 18:16:30 - Tomcat initialized with port(s): 8082 (http)
+2022-01-25 18:16:30 - Initializing ProtocolHandler ["http-nio-8082"]
+2022-01-25 18:16:30 - Starting service [Tomcat]
+2022-01-25 18:16:30 - Starting Servlet engine: [Apache Tomcat/9.0.54]

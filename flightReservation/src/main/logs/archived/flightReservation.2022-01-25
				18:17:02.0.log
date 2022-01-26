@@ -1,0 +1,3 @@
+2022-01-25 18:17:02 - Starting ProtocolHandler ["http-nio-8082"]
+2022-01-25 18:17:02 - Tomcat started on port(s): 8082 (http) with context path '/flightReservation'
+2022-01-25 18:17:02 - Started FlightReservationApplication in 6.918 seconds (JVM running for 8.381)

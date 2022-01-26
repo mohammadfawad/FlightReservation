@@ -12,20 +12,23 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
-	
+
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
 	@Override
-	public void configure(HttpSecurity httpSecurity) throws Exception{
-		
-			httpSecurity.authorizeRequests().antMatchers("/", "/index", "/userRegistrationForm", "/loginShow", "/login", "/viewAllFlights", "/registerUser", "/reservations/*")
-					.permitAll().antMatchers("/admin/*", "/viewAllRegisteredUsers", "/showAddFlight")
-					.hasAnyAuthority("ADMIN").anyRequest().authenticated().and().csrf().disable();
+	public void configure(HttpSecurity httpSecurity) throws Exception {
+
+		httpSecurity.authorizeRequests()
+				.antMatchers("/", "/index", "/userRegistrationForm", "/loginShow", "/login", "/viewAllFlights",
+						"/registerUser", "/reservations/*", "/flights", "/completeReservation", "/reservations",
+						"/createreservation", "/findFlights")
+				.permitAll().antMatchers("/admin/*", "/viewAllRegisteredUsers", "/showAddFlight")
+				.hasAnyAuthority("ADMIN").anyRequest().authenticated().and().csrf().disable();
 	}
-	
+
 	@Bean(name = BeanIds.AUTHENTICATION_MANAGER)
 	@Override
 	public AuthenticationManager authenticationManagerBean() throws Exception {

@@ -1,0 +1,4 @@
+2022-01-25 19:59:48 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-25 19:59:48 - Initializing Servlet 'dispatcherServlet'
+2022-01-25 19:59:48 - Completed initialization in 1 ms
+2022-01-25 19:59:48 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]

@@ -62,7 +62,7 @@ public class ReservationServiceImplimentation implements ReservationService {
 		Reservation savedReservation = this.reservationRepository.save(reservation);
 		String filePath = this.PASSENGER_RESERVATION_PATH_PDF + savedReservation.getReservationId().toString() + ".pdf";
 		this.pdfGenerator.generateItinerary(savedReservation, filePath);
-		this.emailUtility.sendItinerary(passenger.getPassengerEmail(), filePath);
+		//this.emailUtility.sendItinerary(passenger.getPassengerEmail(), filePath);
 		ReservationServiceImplimentation.ReservationServiceLOGGER.info("Method:bookFlight()->SavedReservation + PDF and Email Generated.");
 		
 		return savedReservation;

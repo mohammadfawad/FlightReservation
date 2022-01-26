@@ -1,0 +1,1 @@
+2022-01-26 11:34:03 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'departureCity' for method parameter type String is not present]

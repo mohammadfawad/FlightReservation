@@ -1,0 +1,6 @@
+2022-01-26 10:52:11 - flightReservationDatasource - Starting...
+2022-01-26 10:52:11 - flightReservationDatasource - Start completed.
+2022-01-26 10:52:11 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-26 10:52:11 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-26 10:52:11 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-26 10:52:11 - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect

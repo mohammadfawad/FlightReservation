@@ -1,0 +1,2 @@
+2022-01-26 10:19:56 - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-26 10:19:56 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

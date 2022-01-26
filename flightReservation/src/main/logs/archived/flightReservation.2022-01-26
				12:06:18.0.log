@@ -1,0 +1,4 @@
+2022-01-26 12:06:18 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-26 12:06:18 - Initializing Servlet 'dispatcherServlet'
+2022-01-26 12:06:18 - Completed initialization in 2 ms
+2022-01-26 12:06:18 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'departureCity' for method parameter type String is not present]

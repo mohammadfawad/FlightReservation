@@ -1,0 +1,27 @@
+2022-01-25 20:31:06 - Adding welcome page template: index
+2022-01-25 20:31:06 - Starting ProtocolHandler ["http-nio-8082"]
+2022-01-25 20:31:06 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8082 is already in use
+2022-01-25 20:31:06 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-25 20:31:06 - flightReservationDatasource - Shutdown initiated...
+2022-01-25 20:31:06 - flightReservationDatasource - Shutdown completed.
+2022-01-25 20:31:06 - Pausing ProtocolHandler ["http-nio-8082"]
+2022-01-25 20:31:06 - Stopping service [Tomcat]
+2022-01-25 20:31:06 - Stopping ProtocolHandler ["http-nio-8082"]
+2022-01-25 20:31:06 - Destroying ProtocolHandler ["http-nio-8082"]
+2022-01-25 20:31:06 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-25 20:31:06 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+

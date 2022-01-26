@@ -1,0 +1,4 @@
+2022-01-25 20:47:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-25 20:47:47 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-25 20:47:47 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-25 20:47:47 - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect

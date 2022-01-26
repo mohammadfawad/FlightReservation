@@ -6,6 +6,7 @@
 package com.passengerManagement.flightReservation.Entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -93,11 +94,15 @@ public class Reservation implements Serializable {
 	}
 
 	public Date getCreated() {
-		return created;
+		return this.created;
 	}
 
 	public void setCreated(Date created) {
-		this.created = created;
+		if(created == null) {
+			this.created = new Timestamp(System.currentTimeMillis());
+		}else {
+			this.created = created;
+		}
 	}
 
 	public Passenger getReservationPassengerId() {

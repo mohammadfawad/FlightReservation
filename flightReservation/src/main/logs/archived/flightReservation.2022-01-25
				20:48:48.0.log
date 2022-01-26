@@ -1,0 +1,2 @@
+2022-01-25 20:48:48 - Method:bookFlight()->SavedReservation + PDF and Email Generated.
+2022-01-25 20:48:48 - Method:completeReservation()ReservationRequest [flightId=1, passengerFirstName=Jay Chawala, passengerLastName=gandapur, passengerEmail=m.mohammadfawad@gmail.com, passengerPhone=03000874407, nameOnCard=Sajjad Sabir, cardNo=123456789, expiryDate=05-02-2023, securityCode=457]

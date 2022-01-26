@@ -1,0 +1,2 @@
+2022-01-25 18:31:22 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-25 18:31:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
