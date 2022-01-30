@@ -1,0 +1,4 @@
+2022-01-28 10:12:50 - Application shutdown requested.
+2022-01-28 10:12:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-28 10:12:50 - flightReservationDatasource - Shutdown initiated...
+2022-01-28 10:12:50 - flightReservationDatasource - Shutdown completed.

@@ -37,7 +37,7 @@ public class ReservationRestController {
 	@Autowired
 	PassengerRepository passengerRepository;
 
-	// @CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/reservations/{reservationId}", method = RequestMethod.GET)
 	public Reservation findReservation(@PathVariable("reservationId") Integer reservationId) {
 		ReservationRestController.reservationRestLOGGER.info("Method:findReservation({})" + reservationId.toString());
@@ -63,6 +63,11 @@ public class ReservationRestController {
 		ReservationRestController.reservationRestLOGGER.info("Method:findFlights() " + departureDate);
 		return this.flightRepository.findByDepartureCityAndArrivalCityAndDateOfDeparture(departureCity, arrivalCity,
 				departureDate);
+	}
+	
+	@RequestMapping(value = "/flights/{flightId}", method = RequestMethod.GET)
+	public Flight findFlightByflightId(@PathVariable("flightId") Integer flightId) {
+		return this.flightRepository.getById(flightId);
 	}
 
 	@RequestMapping(value = "/createreservation", method = RequestMethod.POST)

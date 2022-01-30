@@ -23,7 +23,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 		httpSecurity.authorizeRequests()
 				.antMatchers("/", "/index", "/userRegistrationForm", "/loginShow", "/login", "/viewAllFlights",
-						"/registerUser", "/reservations/*", "/flights", "/completeReservation", "/reservations",
+						"/registerUser", "/reservations/*", "/flights", "/flights/*", "/completeReservation", "/reservations",
 						"/createreservation", "/findFlights")
 				.permitAll().antMatchers("/admin/*", "/viewAllRegisteredUsers", "/showAddFlight")
 				.hasAnyAuthority("ADMIN").anyRequest().authenticated().and().csrf().disable();

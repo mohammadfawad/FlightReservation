@@ -1,0 +1,4 @@
+2022-01-26 13:23:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-26 13:23:17 - Initializing Servlet 'dispatcherServlet'
+2022-01-26 13:23:17 - Completed initialization in 2 ms
+2022-01-26 13:23:17 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.sql.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.RequestParam @org.springframework.format.annotation.DateTimeFormat java.sql.Date] for value '2018-02-05'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [2018-02-05]]

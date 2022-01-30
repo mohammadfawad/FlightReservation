@@ -1,0 +1,4 @@
+2022-01-29 15:17:36 - Tomcat initialized with port(s): 8082 (http)
+2022-01-29 15:17:36 - Initializing ProtocolHandler ["http-nio-8082"]
+2022-01-29 15:17:36 - Starting service [Tomcat]
+2022-01-29 15:17:36 - Starting Servlet engine: [Apache Tomcat/9.0.54]

@@ -1,0 +1,2 @@
+2022-01-26 13:35:52 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-26 13:35:52 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

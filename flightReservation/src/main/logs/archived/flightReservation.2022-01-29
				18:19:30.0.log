@@ -1,0 +1,4 @@
+2022-01-29 18:19:30 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-29 18:19:30 - Initializing Servlet 'dispatcherServlet'
+2022-01-29 18:19:30 - Completed initialization in 2 ms
+2022-01-29 18:19:30 - Method:findFlights() Mon Feb 05 00:00:00 PKT 2018

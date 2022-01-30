@@ -1,0 +1,4 @@
+2022-01-26 13:32:26 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-26 13:32:26 - Initializing Servlet 'dispatcherServlet'
+2022-01-26 13:32:26 - Completed initialization in 2 ms
+2022-01-26 13:32:26 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.sql.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.RequestParam @org.springframework.format.annotation.DateTimeFormat java.sql.Date] for value '05-02-2018'; nested exception is org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.util.Date] to type [@org.springframework.web.bind.annotation.RequestParam @org.springframework.format.annotation.DateTimeFormat java.sql.Date]]

@@ -1,0 +1,8 @@
+2022-01-28 19:22:48 - Tomcat initialized with port(s): 8082 (http)
+2022-01-28 19:22:48 - Initializing ProtocolHandler ["http-nio-8082"]
+2022-01-28 19:22:48 - Starting service [Tomcat]
+2022-01-28 19:22:48 - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-01-28 19:22:48 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-01-28 19:22:48 - Initializing Spring embedded WebApplicationContext
+2022-01-28 19:22:48 - Root WebApplicationContext: initialization completed in 2712 ms
+2022-01-28 19:22:48 - flightReservationDatasource - Starting...
